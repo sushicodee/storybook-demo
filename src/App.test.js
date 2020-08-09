@@ -1,9 +1,14 @@
 import React from 'react';
-import { render } from '@testing-library/react';
+import {render ,fireEvent} from '@testing-library/react';
 import App from './App';
 
-test('renders learn react link', () => {
-  const { getByText } = render(<App />);
-  const linkElement = getByText(/learn react/i);
-  expect(linkElement).toBeInTheDocument();
-});
+test('it renders input correctly' , () => {
+    // const component = shallow(<Input/>);
+    const {getByTestId ,getByText} = render(<App/>)
+    const input = getByTestId('input');
+    const button = getByText('Create');
+    fireEvent.change(input, {target: { value:"buy Cake"}})
+    fireEvent.click(button);
+    getByText('buy Cake');
+})
+

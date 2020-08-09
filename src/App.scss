@@ -1,0 +1,16 @@
+html,body{
+  // background-color: black;
+}
+
+.App {
+  text-align: center;
+
+}
+.todo-container{
+  width:100vw;
+  .todo-maker {
+    margin: 100px auto 20px auto;
+    width:50vw;
+    display:flex;
+  }
+}

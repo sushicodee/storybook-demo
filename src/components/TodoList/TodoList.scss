@@ -1,0 +1,10 @@
+.todo-list{
+    margin:auto;
+    border:2px solid #FF0000;
+    overflow-y: scroll;
+    height: 200px;
+    ul{
+        list-style: none;
+        display:contents;
+    }
+}
